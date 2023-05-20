@@ -6,6 +6,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Navigate, link, useNavigate } from "react-router-dom";
 import { updateDoc,doc } from "firebase/firestore";
 import { db } from "../firebase.config";
+import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg'
+import homeIcon from '../assets/svg/homeIcon.svg'
+import { Link } from "react-router-dom";
+
+
 function Profile() {
   const [user, setUser] = useState(null);
   const [changeDetails, setChangeDetails] = useState(false);
@@ -45,10 +50,10 @@ function Profile() {
     
     
   };
-  useEffect(() => {
-    setUser(auth.currentUser);
-    console.log(user);
-  }, []);
+  // useEffect(() => {
+  //   setUser(auth.currentUser);
+  //   console.log(user);
+  // }, []);
   return (
     <>
       <div className="profile">
@@ -91,6 +96,11 @@ function Profile() {
               />
             </form>
           </div>
+          <Link to='/create-listing'className='createListing'>
+            <img src={homeIcon} alt="home" />
+            <p>Sell of rent your home</p>
+            <img src={arrowRight} alt="arrow-right" />
+          </Link>
         </main>
         <ToastContainer/>
       </div>

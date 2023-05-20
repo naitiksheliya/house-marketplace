@@ -7,7 +7,7 @@ const PrivetRoute = () => {
     if(isLoading){
         return <Spinner/>
     }
-    return loggedIn?<Outlet/>:<Navigate to='/signin'/>
+    return loggedIn?<Outlet/>:<Navigate to='/sign-in'/>
 }
 
 export default PrivetRoute

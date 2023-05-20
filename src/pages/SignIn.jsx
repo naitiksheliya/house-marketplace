@@ -75,7 +75,7 @@ function SignIn() {
               onClick={() => setShowPassword((prevState) => !prevState)}
             />
           </div>
-          <Link to="/forgotpassword" className="forgotPasswordLink">
+          <Link to="/forgot- password" className="forgotPasswordLink">
             {" "}
             Forgot Password
           </Link>
